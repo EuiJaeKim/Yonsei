@@ -1,0 +1,9 @@
+mkdir -p build/homenet
+    compiling BaseC to a homenet binary
+ncc -o build/homenet/main.exe -Os -finline-limit=100000 -Wall -Wshadow -Wnesc-all -target=homenet -fnesc-cfile=build/homenet/app.c -board=micasb -DDEFINED_TOS_AM_GROUP=50 -fnesc-dump=wiring -fnesc-dump='interfaces(!abstract())' -fnesc-dump='referenced(interfacedefs, components)' -fnesc-dumpfile=build/homenet/wiring-check.xml BaseC.nc -lm 
+    compiled BaseC to build/homenet/main.exe
+           13402 bytes in ROM
+            1509 bytes in RAM
+avr-objcopy --output-target=srec build/homenet/main.exe build/homenet/main.srec
+avr-objcopy --output-target=ihex build/homenet/main.exe build/homenet/main.hex
+    writing TOS image
