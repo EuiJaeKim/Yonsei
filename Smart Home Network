@@ -4,3 +4,4 @@
 프로젝트 개요 : HBE-Ubi-Homenet 장비를 사용한 스마트 홈 네트워크를 구축
 
 Test 폴더는 java 코드 파일
+Base, Ch6_GasDetector_101, Ch8_Dimmer_181, DoorLock, GasShutter, MotionDetector, Outlet 폴더는 NesC 코드파일
