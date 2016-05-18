@@ -1,0 +1,3 @@
+COMPONENT=MotionDetectorC
+CFLAGS += -DDEFINED_TOS_AM_GROUP=50
+include $(MAKERULES)
